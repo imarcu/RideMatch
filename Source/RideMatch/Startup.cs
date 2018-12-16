@@ -33,26 +33,14 @@ namespace RideMatch
 				options.CheckConsentNeeded = context => true;
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
-			var azureSettingsSection = Configuration.GetSection("AzureSettings");
-			var azureSettings = azureSettingsSection.Get<AzureSettings>();
+			//var azureSettingsSection = Configuration.GetSection("AzureSettings");
+			//var azureSettings = azureSettingsSection.Get<AzureSettings>();
 
-			services.AddAuthentication(options =>
+			services.AddAuthentication().AddFacebook(facebookOptions =>
 			{
-				options.DefaultAuthenticateScheme =
-					CookieAuthenticationDefaults.AuthenticationScheme;
-				options.DefaultSignInScheme =
-					CookieAuthenticationDefaults.AuthenticationScheme;
-				options.DefaultChallengeScheme =
-					OpenIdConnectDefaults.AuthenticationScheme;
-			}).AddOpenIdConnect(options =>
-			{
-				options.Authority = "https://login.microsoftonline.com/" +
-				                    azureSettings.Tenant;
-				options.ClientId = azureSettings.ClientId;
-				options.ResponseType = OpenIdConnectResponseType.IdToken;
-				options.CallbackPath = "/security/signin-callback";
-				options.SignedOutRedirectUri = azureSettings.RootUrl;
-			}).AddCookie();
+				facebookOptions.AppId = Configuration["Facebook:AppId"];
+				facebookOptions.AppSecret = Configuration["Facebook:AppSecret"];
+			});
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 		}
