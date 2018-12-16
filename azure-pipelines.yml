@@ -33,8 +33,3 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
-- task: AzureRmWebAppDeployment@3
-  inputs:
-    azureSubscription: '<Azure service connection>'
-    WebAppName: 'MRideMatch'
-    Package: $(System.ArtifactsDirectory)/**/*.zip
