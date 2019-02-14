@@ -35,8 +35,7 @@
   "_release": "4.0.0",
   "_resolution": {
     "type": "version",
-    "tag": "v4.0.0",
-    "commit": "0b9c4a4007c44201dce9a6cc1a38407005c26c86"
+    "tag": "v4.0.0"
   },
   "_source": "https://github.com/twbs/bootstrap.git",
   "_target": "v4.0.0",
