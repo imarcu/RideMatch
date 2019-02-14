@@ -18,18 +18,22 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top: -60px">
+	<div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
 	<a class="navbar-brand" asp-action="Index" asp-controller="Home">RideMatch</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
-	<div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
-		<div class="navbar-nav">
-			<a class="nav-item nav-link" asp-controller="Home" asp-action="Index">Institutions</a>
-			<a class="nav-item nav-link" asp-controller="Home" asp-action="About">Schedule</a>
-			<a class="nav-item nav-link" asp-controller="Home" asp-action="About">Try Now</a>
-			<a class="nav-item nav-link" asp-controller="Home" asp-action="About">Pricing</a>
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		<div class="navbar-nav justify-content-center">
+			<ul class="navbar-nav w-100 justify-content-center">
+				<li class="nav-item"><a class="nav-link"  asp-controller="Home" asp-action="Index">Institutions</a></li>
+				<li class="nav-item"><a class="nav-item nav-link" asp-controller="Home" asp-action="About">Schedule</a></li>
+				<li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="About">Try Now</a></li>
+				<li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="About">Pricing</a></li>
+			</ul>
 			@*<a class="nav-item nav-link disabled" href="#">Disabled</a>*@
 		</div>
+	</div>
 	</div>
 </nav>
 
@@ -68,3 +72,4 @@
 @RenderSection("Scripts", required: false)
 </body>
 </html>
+
