@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 
+using RideMatch.Areas.Identity.Data;
 using RideMatch.Models;
 
 namespace RideMatch.Migrations
