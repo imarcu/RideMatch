@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace RideMatch.Areas.Identity.Data
 {
-    // Add profile data for application users by adding properties to the RideMatchUser class
-    public class RideMatchUser : IdentityUser
-    {
-    }
+	// Add profile data for application users by adding properties to the RideMatchUser class
+	public class RideMatchUser : IdentityUser
+	{
+	}
 }
