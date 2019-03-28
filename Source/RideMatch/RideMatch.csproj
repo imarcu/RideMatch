@@ -15,4 +15,8 @@
     <Folder Include="Areas\Identity\Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RideMatch.Models\RideMatch.Models.csproj" />
+  </ItemGroup>
+
 </Project>
